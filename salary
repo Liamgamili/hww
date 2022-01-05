@@ -1,0 +1,12 @@
+from TooHighError import *
+from TooLowError import *
+
+class SalaryInputs:
+    def get_salary(self, amount):
+        amount = float(amount)
+        if amount > 100_000:
+            raise TooHighError
+        elif amount < 15_000:
+            raise TooLowError
+        else:
+            return amount
